@@ -1,0 +1,9 @@
+---
+  - hosts: all
+    become: true
+    roles:
+      - php
+      - apache2
+    vars:
+      proxy_env:
+       http_proxy: http://ITS-553272-647f8:1f8b9@proxy.its.ac.id:8080

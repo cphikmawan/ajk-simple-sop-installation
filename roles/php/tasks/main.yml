@@ -1,0 +1,19 @@
+- name: install php
+  package:
+    name: "{{ packages }}"
+    state: present
+    update_cache: yes
+  vars:
+    packages:
+      - php
+      - php-fpm
+      - php-gd
+      - php-curl
+      - php-mysql
+      - php-cli
+      - php-xml
+      - php-mbstring
+      - php-zip
+      - php-json
+      - libapache2-mod-php
+  environment: "{{ proxy_env }}"  

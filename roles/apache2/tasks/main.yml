@@ -1,0 +1,28 @@
+- name: install apache2
+  become: yes
+  package: 
+    name: apache2
+    state: present
+    update_cache: yes
+  environment: "{{ proxy_env }}"
+
+- name: enable mod_rewrite
+  apache2_module:
+    name: rewrite
+    state: present
+    ignore_configcheck: yes
+  notify:
+    - restart apache2
+
+- name: remove index.html
+  become: yes
+  file:
+    path: /var/www/html/index.html
+    state: absent
+
+- name: copy index.php 
+  become: yes
+  copy:
+    src: files/index.php
+    dest: /var/www/html/
+    mode: 0644 
