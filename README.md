@@ -24,7 +24,7 @@
 |12|Node.js|
 |13|Htop|
 
-__`>> Tested on remoted server Ubuntu 18.04 LTS`__
+__`>> Tested on Ubuntu Desktop 18.04 LTS`__
 
 #### ● Step 1 - Prepare
 
