@@ -1,5 +1,4 @@
 - name: install apache2
-  become: yes
   package: 
     name: apache2
     state: present
@@ -15,13 +14,11 @@
     - restart apache2
 
 - name: remove index.html
-  become: yes
   file:
     path: /var/www/html/index.html
     state: absent
 
 - name: copy index.php 
-  become: yes
   copy:
     src: files/index.php
     dest: /var/www/html/

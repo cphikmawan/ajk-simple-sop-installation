@@ -1,0 +1,6 @@
+- name: install mysql
+  package:
+    name: mysql-server
+    state: present
+    update-cache: yes
+  environment: "{{ proxy_env }}"

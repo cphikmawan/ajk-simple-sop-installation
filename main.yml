@@ -1,9 +1,15 @@
 ---
   - hosts: all
-    become: true
+    become: yes
     roles:
       - php
       - apache2
+      - mysql
+      - apt_package
+      - deb_package
+      - vscode
     vars:
       proxy_env:
-       http_proxy: http://ITS-553272-647f8:1f8b9@proxy.its.ac.id:8080
+        http_proxy: http://ITS-553272-647f8:1f8b9@proxy.its.ac.id:8080
+      proxy_env2:
+        https_proxy: http://ITS-553272-647f8:1f8b9@proxy.its.ac.id:8080

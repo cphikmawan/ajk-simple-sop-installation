@@ -1,13 +1,13 @@
-### Automation SOP AJK Using Ansible
+### # Automation SOP AJK Using Ansible
 
-#### Current Requirements
+#### ● Current Requirements
 |No|Name|Version|Function|
 |---|---|---|---|
 |1|Ansible|2.8.4 or latest|Automation tools|
 |2|Python|3.6.8 or latest|Running SSH Key Gen script|
 |3|SSHPASS|1.06 or latest|Forced using password inline|
 
-#### Will Installed on Future
+#### ● Goals
 |No|Name|
 |---|---|
 |1|Terminator|
@@ -15,13 +15,20 @@
 |3|VSCode|
 |4|Apache2|
 |5|MySQL|
-|6|VirtualBox|
+|6|Virtualbox|
 |7|PHP|
 |8|Git|
+|9|Tmux|
+|10|pip3|
+|11|npm|
+|12|Node.js|
+|13|Htop|
 
-#### Step 1 - Prepare
+__`>> Tested on remoted server Ubuntu 18.04 LTS`__
 
-##### Prepare File Needed
+#### ● Step 1 - Prepare
+
+##### >> Prepare File Needed
 1. Clone this repository
 ```sh
 $ git clone https://github.com/cphikmawan/automation-sop-ajk-using-ansible
@@ -37,7 +44,7 @@ $ mv hosts.bak hosts
 $ mv hosts.json.bak hosts.json
 ```
 
-##### SSH Key Gen
+##### >> SSH Key Gen
 1. Generate ssh-keygen on master host
 ```sh
 $ ssh-keygen -t rsa
@@ -53,7 +60,7 @@ $ ssh-copy-id username@host
 $ ssh username@host
 ```
 
-##### SSH Key Gen With Script
+##### >> SSH Key Gen With Script
 If you want automation using script try to run [gen.py](scripts/gen.py)
 1. Edit [hosts.json](scripts/hosts.json) with your remoted servers
 2. run __gen.py__
@@ -62,7 +69,7 @@ $ python3 gen.py
 ```
 3. Done
 
-#### Step 2 - Configuration & Connection
+#### ● Step 2 - Configuration & Connection
 1. Edit [hosts](hosts) file with remoted server what ever you want, example:
 ```
 [workstation]
@@ -84,7 +91,7 @@ $ ansible workstation -m ping
 }
 ```
 
-#### Step 3 - Run The Playbook
+#### ● Step 3 - Run The Playbook
 
 1. Run the playbook
 ```sh

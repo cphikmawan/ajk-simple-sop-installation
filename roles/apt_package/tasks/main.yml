@@ -1,0 +1,14 @@
+- name: install other apt package
+  package:
+    name: "{{ packages }}"
+  vars:
+    packages:
+      - git
+      - terminator
+      - virtualbox
+      - tmux
+      - python3-pip
+      - nodejs
+      - npm
+      - htop
+  environment: "{{ proxy_env }}"
