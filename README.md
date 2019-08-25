@@ -99,4 +99,10 @@ $ ansible-playbook main.yml
 ```
 2. Enjoy :)
 
+#### References
+- [https://docs.ansible.com/](https://docs.ansible.com/)
+- [https://docs.ansible.com/ansible/latest/modules/apt_module.html](https://docs.ansible.com/ansible/latest/modules/apt_module.html)
+- [https://docs.python.org/3/library/subprocess.html](https://docs.python.org/3/library/subprocess.html)
+- [https://docs.ansible.com/ansible/latest/installation_guide/intro_installation.html#latest-releases-via-apt-ubuntu](https://docs.ansible.com/ansible/latest/installation_guide/intro_installation.html#latest-releases-via-apt-ubuntu)
+
 Created with <3 By Cloudy
