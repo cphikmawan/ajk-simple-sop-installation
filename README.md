@@ -99,6 +99,43 @@ $ ansible-playbook main.yml
 ```
 2. Enjoy :)
 
+#### Additional Example Running Apache2 Service From Website
+##### Requirements
+- Python3
+- Virtualenv
+- Pip3
+- Flask
+
+##### Step
+1. Install pip3
+```sh
+$ sudo apt install python3-pip
+```
+
+2. Install requirements
+```sh
+$ pip3 install -r requirements.txt
+```
+
+3. Change directory to webs
+```sh
+$ cd webs
+```
+
+4. Edit directory path on [app.py](webs/app.py)
+```python
+home = 'path/to/directory'
+```
+
+5. Export
+```sh
+$ export FLASK_APP=app.py
+$ export FLASK_ENV=development
+$ flask run
+```
+
+6. Access web on http://localhost:5000/
+
 #### References
 - [https://docs.ansible.com/](https://docs.ansible.com/)
 - [https://docs.ansible.com/ansible/latest/modules/apt_module.html](https://docs.ansible.com/ansible/latest/modules/apt_module.html)

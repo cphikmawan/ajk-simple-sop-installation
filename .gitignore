@@ -1,2 +1,5 @@
 hosts
 hosts.json
+flask-venv
+.vscode
+__pycache__

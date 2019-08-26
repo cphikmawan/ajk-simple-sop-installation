@@ -1,0 +1,24 @@
+---
+  - hosts: all
+    become: yes
+    tasks:
+    - name: restart apache2
+      service:
+        name: apache2
+        state: restarted
+      tags:
+        - restart
+    
+    - name: start apache2
+      service:
+        name: apache2
+        state: started
+      tags:
+        - start
+
+    - name: stop apache2
+      service:
+        name: apache2
+        state: stopped
+      tags:
+        - stop
